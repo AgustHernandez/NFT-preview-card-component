@@ -1,0 +1,60 @@
+@import url('https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600&display=swap');
+@import "../estilos/mediasQueries";
+
+* {
+    margin: 0;
+}
+html {
+    font-size: 62.5%;
+}
+
+body {
+    background-color: hsl(217, 54%, 11%);
+    font-family: 'Outfit', sans-serif;
+    height: auto;
+}
+
+.fondo {
+    @include mobile {
+        margin: 100px 25px 0px 25px;
+        background-color: hsl(216, 50%, 16%);
+        border-radius: 18px;
+        width: 320px;
+    }
+    .containerImagen {
+        @include mobile {
+            display: grid;
+            place-items: center;
+            margin: 25px;
+        }
+        .imgObjeto {
+            @include mobile {
+                margin-top: 25px;
+                width: 250px;
+                border-radius: 15px;
+            }
+        }
+    }
+    .containerText {
+        @include mobile {
+            width: 300px;
+            margin-left: 25px;
+        }
+        .textTitulo {
+            @include mobile {
+                font-size: 2.5rem;
+                font-weight: 400;
+                color: hsl(0, 0%, 100%);
+            }
+        }
+        .textParrafo {
+            @include mobile {
+                padding-top: 15px;
+                font-size: 1.7rem;
+                font-weight: 300;
+                color: hsl(240, 9%, 65%);
+                line-height: 3rem;
+            }
+        }
+    }
+}
